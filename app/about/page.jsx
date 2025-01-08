@@ -5,12 +5,13 @@ import Image from "next/image";
 const Page = () => {
   return (
     <>
-      {/* CSS-only Slider */}
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-100 z-50 flex items-center justify-center slider">
-        <div className="text-white text-4xl">Welcome to My Portfolio</div>
+        <div className="text-white text-4xl">
+          Welcome to My{" "}
+          <span className="text-red-500 text-3xl">Portfolio</span>
+        </div>
       </div>
 
-      {/* Flexbox for other content */}
       <div className="flex translate-y-16">
         <div className="relative min-h-screen w-1/3 bg-gray-900">
           <Image
@@ -38,16 +39,15 @@ const Page = () => {
           </div>
         </div>
 
-        {/* Right Column with Horizontal Scrolling */}
         <div className="min-h-screen w-2/3 bg-gray-950 overflow-x-auto snap-x snap-mandatory ml-4">
           <div className="flex w-[300%] h-full">
             {/* Page 1 */}
             <div className="w-[100vw] h-[85vh] bg-slate-700 text-white p-8 rounded-xl snap-start mx-2 mt-2">
               <h2 className="text-4xl text-white mb-4">Education</h2>
               <p className="text-lg text-white">
-                I am currently a first-year student at IIT, where I am pursuing
-                my degree in Computer Science. During my studies, I have
-                developed a strong foundation in computer programming,
+                I am currently a first-year student at IIT Jammu, where I am
+                pursuing my degree in Computer Science. During my studies, I
+                have developed a strong foundation in computer programming,
                 algorithms, and data structures, as well as a keen interest in
                 fields such as machine learning, cybersecurity, and web
                 development.
@@ -148,7 +148,6 @@ const Page = () => {
               <h2 className="text-4xl text-white mb-4">Skills</h2>
 
               <div className="grid grid-cols-2 gap-8">
-                {/* Left Column for Skills */}
                 <div>
                   <h3 className="text-2xl text-white">Programming Languages</h3>
                   <ul className="text-lg text-white ml-6 list-disc">
@@ -176,13 +175,10 @@ const Page = () => {
                   </ul>
                 </div>
 
-                {/* Right Column for Skills */}
                 <div>
                   <h3 className="text-2xl text-white">Tools & Frameworks</h3>
                   <ul className="text-lg text-white ml-6 list-disc">
                     <li>Git/GitHub</li>
-                    <li>Docker</li>
-                    <li>Vercel</li>
                     <li>Supabase</li>
                     <li>Clerk</li>
                     <li>Neon</li>
@@ -203,7 +199,6 @@ const Page = () => {
         </div>
       </div>
 
-      {/* CSS for the Slider Animation */}
       <style jsx>{`
         .slider {
           animation: slideIn 6s ease-out forwards;
