@@ -33,7 +33,7 @@ const FlipCards = () => {
       delay:2
     },
     {
-      extra: "w-64 h-64 -translate-y-12",
+      extra: "w-72 h-72 -translate-y-12",
       frontColor: "bg-pink-600",
       backColor: "bg-yellow-300",
       front: "Multiple Projects",
