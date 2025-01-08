@@ -83,6 +83,19 @@ const SocialsSlider = () => {
                 />
               </a>
             </div>
+             <div
+                className={`rotating-text absolute left-[80%] top-[80%] flex transition-all`}
+              >
+                <h1 className={`letter text-xs p-0.5`}>{"<"}</h1>
+                <h1 className={`letter text-xs p-0.5`}>-</h1>
+                <h1 className={`letter text-xs p-0.5`}>S</h1>
+                <h1 className={`letter text-xs p-0.5`}>W</h1>
+                <h1 className={`letter text-xs p-0.5`}>I</h1>
+                <h1 className={`letter text-xs p-0.5`}>P</h1>
+                <h1 className={`letter text-xs p-0.5 pr-2`}>E</h1>
+                <h1 className={`letter text-xs p-0.5`}>-</h1>
+                <h1 className={`letter text-xs p-0.5`}>{">"}</h1>
+              </div>
             <div className="w-[100vw] h-[85vh] bg-slate-800 text-white p-8 rounded-xl snap-start mx-2 mt-2">
               <h2 className="text-4xl text-amber-400 mb-4">Gmail</h2>
               <p className="text-lg text-white">
