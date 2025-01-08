@@ -25,7 +25,7 @@ const SocialsSlider = () => {
           <div className="w-[80%] left-1/2 bg-gray-600 rounded-2xl self-center mt-4 ml-12">
             <p className="text-xl sm:text-3xl md:text-2xl text-center text-white mx-4 mt-2">
               Connect with me on{" "}
-              <span className="text-red-500 text-3xl">Social Media</span>!
+              <span className="text-red-500 text-3xl text-nowrap">Social Media</span>!
             </p>
             <p className="mx-4 my-4 pb-8 text-white">
               Feel free to reach out to me through these platforms! I'm always
