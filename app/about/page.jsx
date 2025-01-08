@@ -1,8 +1,46 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-
+import(useRef,useEffect)
 const Page = () => {
+  const sliderRef = useRef(null);
+  
+    useEffect(() => {
+      const handleWheel = (event) => {
+        if (event.deltaY !== 0) {
+          event.preventDefault();
+  
+          if (sliderRef.current) {
+            const slideWidth =
+              sliderRef.current.querySelector(".snap-start").offsetWidth+16;
+            const scrollPosition = sliderRef.current.scrollLeft;
+  
+            const scrollDirection = event.deltaY > 0 ? 1 : -1;
+  
+            const targetPosition =
+              Math.round(scrollPosition / slideWidth) * slideWidth +
+              scrollDirection * slideWidth;
+  
+            sliderRef.current.scrollTo({
+              left: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        }
+      };
+  
+      const slider = sliderRef.current;
+  
+      if (slider) {
+        slider.addEventListener("wheel", handleWheel, { passive: false });
+      }
+  
+      return () => {
+        if (slider) {
+          slider.removeEventListener("wheel", handleWheel);
+        }
+      };
+    }, []);
   return (
     <>
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-100 z-50 flex items-center justify-center slider">
@@ -39,7 +77,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="min-h-screen w-2/3 bg-gray-950 overflow-x-auto snap-x snap-mandatory ml-4">
+        <div ref ={sliderRef}className="min-h-screen w-2/3 bg-gray-950 overflow-x-auto snap-x snap-mandatory ml-4">
           <div className="flex w-[300%] h-full">
             {/* Page 1 */}
             <div className="w-[100vw] h-[85vh] bg-slate-700 text-white p-8 rounded-xl snap-start mx-2 mt-2">
