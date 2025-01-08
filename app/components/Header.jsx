@@ -26,7 +26,7 @@ const Header = () => {
     {
       id: 4,
       name: "Contact Me",
-      link: "/contact",
+      link: "/contact-me",
       icon: UserSearch,
     },
   ];
