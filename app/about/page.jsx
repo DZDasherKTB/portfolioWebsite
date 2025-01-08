@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import {useRef,useEffect} from "react";
 const Page = () => {
   const sliderRef = useRef(null);
   
