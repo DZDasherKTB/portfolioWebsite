@@ -8,7 +8,7 @@ const SocialsSlider = () => {
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center slider">
         <div className="text-white text-4xl">
           Follow Me on{" "}
-          <span className="text-red-500 text-3xl">Social Media</span>
+          <span className="text-red-500 text-3xl text-nowrap">Social Media</span>
         </div>
       </div>
 
